@@ -21,8 +21,8 @@ if __name__ == '__main__':
             new_contacts_list[row][col] = name
             col += 1
         # Привести все телефоны к одному формату
-        phone = re.findall('', contact[5])
-
+        country_code = re.findall('^(\+7|8).', contact[5])[0]
+        city_code = re.findall('\d', contact[5])[0]
 
     # TODO 2: сохраните получившиеся данные в другой файл
     # код для записи файла в формате CSV
